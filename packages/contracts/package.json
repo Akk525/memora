@@ -1,0 +1,20 @@
+{
+  "name": "@memora/contracts",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "compile": "hardhat compile",
+    "deploy": "hardhat run scripts/deploy.ts --network hedera_testnet",
+    "test": "hardhat test",
+    "clean": "hardhat clean && rm -rf cache artifacts typechain-types"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "dotenv": "^16.0.0",
+    "hardhat": "^2.19.0",
+    "typescript": "^5.3.0"
+  },
+  "dependencies": {
+    "@hashgraph/sdk": "^2.52.0"
+  }
+}

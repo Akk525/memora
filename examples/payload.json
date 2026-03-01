@@ -1,0 +1,9 @@
+{
+  "contentType": "application/json",
+  "content": {
+    "summary": "Phase 1 Memora demo",
+    "facts": ["HCS orders timeline", "IPFS stores ciphertext", "Registry enforces permissions"]
+  },
+  "tags": ["demo", "phase1"],
+  "taskId": "task-demo-1"
+}
