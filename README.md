@@ -9,7 +9,7 @@
 - **Registry contract (Hedera EVM)**: Agent ownership, delegates, and memory refs (pointers + hashes). Writer must be owner or delegate.
 - **Supabase**: Index/cache of memories (HCS + contract); can be rebuilt from chain. Also `key_store` for the Key Broker (keys never on-chain).
 - **Key Broker**: Challenge/response auth; checks registry (owner or delegate); returns decryption key over TLS. Phase 1 returns raw key; production should use wrapped keys.
-- **SDK (`@memora/core`)**: Write, query, read (decrypt + verify), and verify with minimal code. **Config-only; no .env required** — pass indexer and key-broker base URLs. See [packages/sdk/README.md](packages/sdk/README.md). To publish the SDK: [docs/SHIPPING-SDK.md](docs/SHIPPING-SDK.md).
+- **SDK (`memora-core`)**: Write, query, read (decrypt + verify), and verify with minimal code. **Config-only; no .env required** — pass indexer and key-broker base URLs. See [packages/sdk/README.md](packages/sdk/README.md). To publish the SDK: [docs/SHIPPING-SDK.md](docs/SHIPPING-SDK.md).
 
 ## Monorepo structure
 
@@ -18,7 +18,7 @@ packages/
   contracts/   # MemoraRegistry.sol, Hardhat, deploy to Hedera testnet
   indexer/     # HCS subscribe + contract events → Supabase; REST API + POST /write
   key-broker/ # Challenge/response + key store; on-chain permission check
-  sdk/        # @memora/core – MemoraClient (cloud mode)
+  sdk/        # memora-core – MemoraClient (cloud mode)
   cli/        # memora write|query|read|verify|tamper-test
   shared/     # Types, canonicalization, crypto (AES-256-GCM, SHA-256)
 supabase/migrations/  # memories, agents, delegates, key_store
@@ -65,7 +65,7 @@ examples/     # Sample payloads
 ## 5-line integration (SDK)
 
 ```typescript
-import { MemoraClient } from "@memora/core";
+import { MemoraClient } from "memora-core";
 
 const client = new MemoraClient({
   indexerBaseUrl: process.env.INDEXER_BASE_URL!,

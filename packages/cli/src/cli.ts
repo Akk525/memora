@@ -10,7 +10,7 @@ import { config as loadEnv } from "dotenv";
 // Load repo root .env when run via pnpm from package dir (cwd = packages/cli)
 loadEnv({ path: path.resolve(process.cwd(), "../../.env") });
 
-import { MemoraClient } from "@memora/core";
+import { MemoraClient } from "memora-core";
 import { ethers } from "ethers";
 
 const INDEXER_BASE_URL = process.env.INDEXER_BASE_URL || "http://localhost:3001";

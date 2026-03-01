@@ -13,7 +13,7 @@
     "contracts:test": "pnpm --filter @memora/contracts run test",
     "indexer:start": "pnpm --filter @memora/indexer run start",
     "key-broker:start": "pnpm --filter @memora/key-broker run start",
-    "sdk:build": "pnpm --filter @memora/core run build",
+    "sdk:build": "pnpm --filter memora-core run build",
     "cli:write": "pnpm --filter @memora/cli run write",
     "cli:query": "pnpm --filter @memora/cli run query",
     "cli:read": "pnpm --filter @memora/cli run read",

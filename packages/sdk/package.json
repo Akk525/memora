@@ -1,5 +1,5 @@
 {
-  "name": "@memora/core",
+  "name": "memora-core",
   "version": "0.1.0",
   "description": "Memora SDK: write, query, read, verify memories. Config-driven, no env required.",
   "main": "./dist/index.js",

@@ -1,6 +1,6 @@
 # Memora Protocol Specification
 
-Public specification for **@memora/core** — verifiable long-term memory for AI agents. This document describes versioning, schemas, and external service contracts.
+Public specification for **memora-core** — verifiable long-term memory for AI agents. This document describes versioning, schemas, and external service contracts.
 
 ---
 

@@ -1,13 +1,13 @@
-# @memora/core
+# memora-core
 
 **Memora SDK** — verifiable long-term memory for AI agents. Write, query, read, and verify memories with a config-driven client. **No env files required:** pass your indexer and key-broker base URLs when constructing the client.
 
 ## Install
 
 ```bash
-npm install @memora/core
+npm install memora-core
 # or
-pnpm add @memora/core
+pnpm add memora-core
 ```
 
 ## Quickstart (60 seconds)
@@ -15,7 +15,7 @@ pnpm add @memora/core
 You need two base URLs: an **indexer** and a **key-broker** (your own stack or a hosted Memora API). No `.env` required by the SDK — pass config explicitly.
 
 ```typescript
-import { MemoraClient } from "@memora/core";
+import { MemoraClient } from "memora-core";
 
 const client = new MemoraClient({
   indexerBaseUrl: "https://your-indexer.example.com",
@@ -51,7 +51,7 @@ The SDK only needs the **base URLs** of a Memora indexer and key-broker. Those c
 No `.env` or environment variables are required by the SDK itself.
 
 ```typescript
-import { MemoraClient } from "@memora/core";
+import { MemoraClient } from "memora-core";
 
 const client = new MemoraClient({
   indexerBaseUrl: "https://your-indexer.example.com",   // or process.env.INDEXER_BASE_URL
